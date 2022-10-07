@@ -91,6 +91,11 @@ export const Button = styled.button`
     transform: translateY(0.5rem);
     box-shadow: 0.1rem 0.1rem 0.1rem #141414;
   }
+
+  &:focus {
+    outline: none !important;
+  }
+
   ${function ({ gridSpan }) {
     if (gridSpan) {
       return `grid-column: span ${gridSpan} ;`;
