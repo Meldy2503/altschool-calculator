@@ -83,17 +83,17 @@ export const Button = styled.button`
   border-right: 0.3rem solid #999;
   font-weight: 700;
   padding: 1.5rem;
-  transition: 0.1s all;
+  transition: 0.2s all;
+
+  @media only screen and (max-width: 60em) {
+    cursor: default;
+  }
 
   &:active {
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
     transform: translateY(0.5rem);
     box-shadow: 0.1rem 0.1rem 0.1rem #141414;
-  }
-
-  &:focus {
-    outline: none !important;
   }
 
   ${function ({ gridSpan }) {
