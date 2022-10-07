@@ -86,7 +86,7 @@ const Calculator = () => {
           <Previous>
             {previous} {operations}
           </Previous>
-          <Current>{current}</Current>
+          <Current>{current === "" && previous === "" ? "0" : current}</Current>
         </Screen>
         <Button clear onClick={clearScreenHandler}>
           AC
