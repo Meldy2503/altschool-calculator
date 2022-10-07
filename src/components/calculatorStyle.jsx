@@ -49,11 +49,10 @@ export const Screen = styled.div`
   word-wrap: break-word;
   word-break: break-all;
   text-align: right;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #1a1a1a;
   margin-bottom: 1rem;
   box-shadow: 0.2rem 0.5rem 0.1rem #000;
   border-radius: 1rem;
-  border: 0.3rem solid #090909;
   border-right: 0.1rem solid #333;
   border-bottom: 0.1rem solid #333;
 `;
@@ -73,7 +72,8 @@ export const Button = styled.button`
   font-size: 2.2rem;
   outline: none;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: #1a1a1a;
   display: flex;
   color: #fff;
   margin-bottom: 1.4rem;
