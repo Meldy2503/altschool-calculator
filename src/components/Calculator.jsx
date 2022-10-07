@@ -88,13 +88,13 @@ const Calculator = () => {
           </Previous>
           <Current>{current}</Current>
         </Screen>
-        <Button gridSpan={1} clear onClick={clearScreenHandler}>
+        <Button clear onClick={clearScreenHandler}>
           AC
         </Button>
         <Button onClick={deleteDigitHandler} del>
           DEL
         </Button>
-        <Button data={"-"} onClick={appendValueHandler}>
+        <Button data={"-"} onClick={appendValueHandler} operation>
           ±
         </Button>
         <Button data={"÷"} onClick={chooseOperationHandler} operation>
@@ -147,7 +147,7 @@ const Calculator = () => {
         <Button data={"00"} onClick={appendValueHandler}>
           00
         </Button>
-        <Button gridSpan={1} equals onClick={equalHandler}>
+        <Button equals onClick={equalHandler}>
           =
         </Button>
       </Container>

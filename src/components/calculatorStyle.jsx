@@ -6,7 +6,8 @@ export const Wrapper = styled.section`
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, rgb(1, 1, 20), #000);
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to right, rgb(1, 1, 10), #000);
 `;
 export const Container = styled.div`
   position: absolute;
@@ -47,12 +48,9 @@ export const Screen = styled.div`
   text-align: right;
   background-color: rgba(0, 0, 0, 0.95);
   margin-bottom: 1rem;
-  box-shadow: 0.2rem 0.3rem 0.1rem #333;
+  box-shadow: 0.2rem 0.4rem 0.1rem #000;
   border-radius: 1rem;
-  border-bottom: 0.3rem solid #333;
-  border-left: 0.3rem solid #999;
-  border-top: 0.3rem solid #333;
-  border-right: 0.3rem solid #999;
+  border: 0.3rem solid #090909;
 `;
 
 export const Previous = styled.div`
@@ -76,12 +74,10 @@ export const Button = styled.button`
   margin-bottom: 1.4rem;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.1rem 1.3rem 0.1rem #292828;
-  border-bottom: 0.3rem solid #333;
-  border-left: 0.3rem solid #999;
-  border-top: 0.3rem solid #333;
-  border-right: 0.3rem solid #999;
+  box-shadow: 0.1rem 1.3rem 0.1rem #000;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  border: none;
   padding: 1.5rem;
   transition: 0.2s all;
 
@@ -90,17 +86,10 @@ export const Button = styled.button`
   }
 
   &:active {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #000;
     transform: translateY(0.5rem);
     box-shadow: 0.1rem 0.1rem 0.1rem #141414;
   }
 
-  ${function ({ gridSpan }) {
-    if (gridSpan) {
-      return `grid-column: span ${gridSpan} ;`;
-    }
-  }};
   ${({ operation }) => operation && `color:#e6c649;`};
   ${({ del }) => del && `background-color:rgb(189, 15, 15, 0.8);`};
   ${({ equals }) => equals && `background-color:rgb(9, 26, 105, 0.8);`};
