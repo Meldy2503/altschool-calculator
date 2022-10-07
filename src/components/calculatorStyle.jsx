@@ -62,17 +62,17 @@ export const Previous = styled.div`
 
 export const Current = styled.div`
   color: #fff;
-  font-size: 3rem;
+  font-size: 3.2rem;
 `;
 
 export const Button = styled.button`
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2.2rem;
   outline: none;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.95);
   display: flex;
-  color: ${({ col }) => col || "#dfd9d9"};
+  color: #fff;
   margin-bottom: 1.4rem;
   justify-content: center;
   align-items: center;
