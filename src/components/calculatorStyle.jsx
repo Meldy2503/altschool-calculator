@@ -31,9 +31,10 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3rem;
-  border-right: 0.5rem solid #dfd9d9;
-  border-bottom: 0.6rem solid #dfd9d9;
-  border-top: 0.7rem solid #dfd9d9;
+  border-right: 0.3rem solid #dfd9d9;
+  border-bottom: 1.1rem solid #dfd9d9;
+  border-top: 0.1rem solid #dfd9d9;
+  border-left: 0.3rem solid #dfd9d9;
   box-shadow: 0 0.2rem 1.5rem #000;
 `;
 
@@ -46,11 +47,13 @@ export const Screen = styled.div`
   word-wrap: break-word;
   word-break: break-all;
   text-align: right;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.92);
   margin-bottom: 1rem;
-  box-shadow: 0.2rem 0.4rem 0.1rem #000;
+  box-shadow: 0.2rem 0.5rem 0.1rem #090909;
   border-radius: 1rem;
   border: 0.3rem solid #090909;
+  border-right: 0.1rem solid #333;
+  border-bottom: 0.1rem solid #333;
 `;
 
 export const Previous = styled.div`
@@ -68,7 +71,7 @@ export const Button = styled.button`
   font-size: 2.2rem;
   outline: none;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.92);
   display: flex;
   color: #fff;
   margin-bottom: 1.4rem;
