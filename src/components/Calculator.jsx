@@ -13,7 +13,7 @@ const Calculator = () => {
   const [previous, setPrevious] = useState("");
   const [operations, setOperations] = useState("");
 
-  // func to display text on screen when a user clicks
+  // func to display the button text on screen when a user clicks
   const appendValueHandler = (e) => {
     const value = e.target.getAttribute("data");
     if (value === "." && current.includes(".")) return;
@@ -45,7 +45,7 @@ const Calculator = () => {
     setOperations(e.target.getAttribute("data"));
   };
 
-  //   equal to func
+  //  the equal to func
   const equalHandler = () => {
     let value = compute();
     if (value === undefined || value == null) return;
@@ -54,7 +54,7 @@ const Calculator = () => {
     setOperations("");
   };
 
-  //   to evaluate result
+  //  func to evaluate result
   const compute = () => {
     let result;
     let previousNumber = parseFloat(previous);
