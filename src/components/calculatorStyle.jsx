@@ -1,7 +1,6 @@
 // added styles using style component CSS framework
 
 import styled from "styled-components";
-import bgImg from "../assets/bg-img.jpg";
 
 export const Wrapper = styled.section`
   position: relative;
@@ -9,35 +8,32 @@ export const Wrapper = styled.section`
   height: 100vh;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(to right, rgb(1, 1, 10), #000);
+  background-color: #181717;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem #383838;
 `;
 export const Container = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  box-shadow: 0.6rem 0.9rem 0.5rem 0.3rem #000;
+  margin: 15rem auto;
   display: grid;
   justify-content: center;
   align-content: center;
   width: 40rem;
-  padding: 2.4rem 0 2rem 0;
-  column-gap: 0.8rem;
-  grid-template-columns: repeat(4, 8rem);
-  grid-template-rows: minmax(12rem, auto) repeat(5, 8rem);
-  background-image: linear-gradient(
-      105deg,
-      rgba(0, 0, 0, 0.09),
-      rgba(0, 0, 0, 0.08)
-    ),
-    url(${bgImg});
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 3rem 0 2rem 0;
+  column-gap: 1rem;
+  grid-template-columns: repeat(4, 7.8rem);
+  grid-template-rows: minmax(12rem, auto) repeat(5, 7.8rem);
+  background-color: #202020;
   border-radius: 3rem;
-  border-right: 0.3rem solid #dfd9d9;
-  border-bottom: 1.1rem solid #dfd9d9;
-  border-top: 0.1rem solid #dfd9d9;
-  border-left: 0.3rem solid #dfd9d9;
-  box-shadow: 0 0.2rem 1.5rem #000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    box-shadow: -0.5rem -0.6rem 0.5rem 0 #141313;
+  }
 `;
 
 export const Screen = styled.div`
@@ -45,16 +41,24 @@ export const Screen = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  padding: 5px;
+  padding: 0.5rem 1rem 0 0.5rem;
   word-wrap: break-word;
   word-break: break-all;
   text-align: right;
-  background-color: #1a1a1a;
-  margin-bottom: 1rem;
-  box-shadow: 0.2rem 0.5rem 0.1rem #000;
+  background-color: #0f0f0f;
+  margin-bottom: 1.2rem;
+  box-shadow: -0.6rem -0.6rem 0.5rem -0.1rem #000;
   border-radius: 1rem;
-  border-right: 0.1rem solid #333;
-  border-bottom: 0.1rem solid #333;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.6rem -0.2rem #141313;
+  }
 `;
 
 export const Previous = styled.div`
@@ -72,18 +76,17 @@ export const Button = styled.button`
   font-size: 2.2rem;
   outline: none;
   border-radius: 50%;
-  /* background-color: rgba(0, 0, 0, 0.7); */
-  background-color: #1a1a1a;
+  background-color: #0f0f0f;
   display: flex;
   color: #fff;
   margin-bottom: 1.4rem;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.1rem 1.3rem 0.1rem #000;
+  box-shadow: 0.6rem 0.8rem 0.3rem 0.1rem #000;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   border: none;
-  padding: 1.5rem;
+  position: relative;
   transition: 0.2s all;
 
   @media only screen and (max-width: 60em) {
@@ -91,14 +94,27 @@ export const Button = styled.button`
   }
 
   &:active {
-    transform: translateY(0.5rem);
-    box-shadow: 0.1rem 0.1rem 0.1rem #141414;
+    transform: translate(-0.1rem, -0.1rem);
+    box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem #141414;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: -0.4rem -0.4rem 0.6rem -0.2rem #424242;
+
+    &:active {
+      transform: translate(-0.1rem, -0.1rem);
+      box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem #141414;
+    }
   }
 
   ${({ operation }) => operation && `color:#e6c649;`};
   ${({ del }) => del && `background-color:rgb(189, 15, 15, 0.8);`};
   ${({ equals }) => equals && `background-color:rgb(9, 26, 105, 0.8);`};
   ${({ clear }) => clear && `background-color:rgb(6, 86, 100, 0.8);`};
-  ${({ decimal }) =>
-    decimal && `font-size: 3.5rem;color:#e6c649;padding-bottom: 3rem;`};
+  ${({ decimal }) => decimal && `font-size: 3.5rem;color:#e6c649;`};
 `;
