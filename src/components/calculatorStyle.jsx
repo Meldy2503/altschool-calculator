@@ -79,7 +79,7 @@ export const Button = styled.button`
   background-color: #0f0f0f;
   display: flex;
   color: #fff;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   box-shadow: 0.6rem 0.8rem 0.3rem 0.1rem #000;
