@@ -19,7 +19,7 @@ export const Container = styled.div`
   justify-content: center;
   align-content: center;
   width: 40rem;
-  padding: 3rem 0 2rem 0;
+  padding: 4rem 0;
   column-gap: 1rem;
   grid-template-columns: repeat(4, 7.8rem);
   grid-template-rows: minmax(12rem, auto) repeat(5, 7.8rem);
@@ -79,7 +79,7 @@ export const Button = styled.button`
   background-color: #0f0f0f;
   display: flex;
   color: #fff;
-  margin-bottom: 1.4rem;
+  margin-top: 1.5rem;
   justify-content: center;
   align-items: center;
   box-shadow: 0.6rem 0.8rem 0.3rem 0.1rem #000;
