@@ -47,7 +47,7 @@ export const Screen = styled.div`
   text-align: right;
   background-color: #0f0f0f;
   margin-bottom: 1.2rem;
-  box-shadow: -0.6rem -0.6rem 0.5rem -0.1rem #000;
+  box-shadow: -0.62rem -0.62rem 0.5rem -0.1rem #000;
   border-radius: 1rem;
   position: relative;
 
