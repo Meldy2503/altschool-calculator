@@ -20,9 +20,9 @@ export const Container = styled.div`
   align-content: center;
   width: 40rem;
   padding: 4rem 0;
-  column-gap: 1.5rem;
-  grid-template-columns: repeat(4, 7.5rem);
-  grid-template-rows: minmax(12rem, auto) repeat(5, 7.5rem);
+  column-gap: 1.1rem;
+  grid-template-columns: repeat(4, 7.8rem);
+  grid-template-rows: minmax(12rem, auto) repeat(5, 7.8rem);
   background-color: #202020;
   border-radius: 3rem;
 
