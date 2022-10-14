@@ -31,7 +31,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 3rem;
-    box-shadow: -0.3rem -0.6rem 0.1rem 0.2rem ${({ theme }) => theme.shadowBefore};
+    box-shadow: -0.1rem -0.7rem 0.1rem 0.2rem ${({ theme }) => theme.shadowBefore};
   }
 `;
 
@@ -61,13 +61,13 @@ export const Screen = styled.div`
 `;
 
 export const Previous = styled.div`
-  color: ${({ theme }) => theme.previous};
+  color: ${({ theme }) => theme.previousText};
   font-size: 2rem;
   font-weight: 500;
 `;
 
 export const Current = styled.div`
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.currentText};
   font-size: 3.2rem;
   font-weight: 500;
 `;
@@ -112,6 +112,11 @@ export const Button = styled.button`
   &:active {
     transform: translate(-0.1rem, -0.1rem);
     box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem ${({ theme }) => theme.btnActiveColor};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.btnHoverBg};
+    color: ${({ theme }) => theme.btnHoverCo};
   }
 
   &::before {
