@@ -2,29 +2,28 @@
 
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
-  position: relative;
+export const CalculatorWrapper = styled.section`
   overflow: hidden;
   height: 100vh;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  background-color: #181717;
-  box-shadow: 0.1rem 0.1rem 0.5rem 0.5rem #383838;
+  background-color: ${({ theme }) => theme.body};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const Container = styled.div`
   position: relative;
-  box-shadow: 0.6rem 0.9rem 0.5rem 0.3rem #000;
-  margin: 15rem auto;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  width: 40rem;
-  padding: 4rem 0;
-  column-gap: 1.1rem;
-  grid-template-columns: repeat(4, 7.8rem);
-  grid-template-rows: minmax(12rem, auto) repeat(5, 7.8rem);
-  background-color: #202020;
+  box-shadow: 0.6rem 0.2rem 0.5rem 0.3rem ${({ theme }) => theme.shadow};
+  width: 41rem;
+  padding: 1rem 0 5rem 0;
+  background-color: ${({ theme }) => theme.containerBgCo};
   border-radius: 3rem;
+
+  @media only screen and (max-width: 330px) {
+    width: 34.5rem;
+  }
 
   &::before {
     content: "";
@@ -32,12 +31,12 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 3rem;
-    box-shadow: -0.5rem -0.6rem 0.5rem 0 #141313;
+    box-shadow: -0.3rem -0.6rem 0.1rem 0.2rem ${({ theme }) => theme.shadowBefore};
   }
 `;
 
 export const Screen = styled.div`
-  grid-column: 1 / -1;
+  height: 12rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -45,11 +44,11 @@ export const Screen = styled.div`
   word-wrap: break-word;
   word-break: break-all;
   text-align: right;
-  background-color: #0f0f0f;
-  margin-bottom: 1.2rem;
-  box-shadow: -0.62rem -0.62rem 0.5rem -0.1rem #000;
+  background-color: ${({ theme }) => theme.btnBgCo};
+  box-shadow: -0.62rem -0.62rem 0.5rem -0.1rem ${({ theme }) => theme.shadow};
   border-radius: 1rem;
   position: relative;
+  margin: 1.7rem 3rem;
 
   &::before {
     content: "";
@@ -57,32 +56,49 @@ export const Screen = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    box-shadow: 0.5rem 0.5rem 0.6rem -0.2rem #141313;
+    box-shadow: 0.5rem 0.5rem 0.6rem -0.2rem ${({ theme }) => theme.shadowBefore};
   }
 `;
 
 export const Previous = styled.div`
-  color: rgba(255, 255, 255, 0.8);
+  color: ${({ theme }) => theme.previous};
   font-size: 2rem;
+  font-weight: 500;
 `;
 
 export const Current = styled.div`
-  color: #fff;
+  color: ${({ theme }) => theme.white};
   font-size: 3.2rem;
+  font-weight: 500;
+`;
+
+export const Btns = styled.div`
+  display: grid;
+  column-gap: 1.1rem;
+  grid-template-columns: repeat(4, 8rem);
+  grid-template-rows: repeat(5, 8rem);
+  justify-content: center;
+  align-content: center;
+
+  @media only screen and (max-width: 330px) {
+    column-gap: 1.1rem;
+    grid-template-columns: repeat(4, 6.7rem);
+    grid-template-rows: repeat(5, 6.7rem);
+  }
 `;
 
 export const Button = styled.button`
   cursor: pointer;
+  margin-top: 2rem;
   font-size: 2.2rem;
   outline: none;
   border-radius: 50%;
-  background-color: #0f0f0f;
+  background-color: ${({ theme }) => theme.btnBgCo};
   display: flex;
-  color: #fff;
-  margin-top: 2rem;
+  color: ${({ theme }) => theme.btnTextColor};
   justify-content: center;
   align-items: center;
-  box-shadow: 0.6rem 0.8rem 0.3rem 0.1rem #000;
+  box-shadow: 0.3rem 1.1rem 0.3rem 0.1rem ${({ theme }) => theme.shadow};
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   border: none;
@@ -95,7 +111,7 @@ export const Button = styled.button`
 
   &:active {
     transform: translate(-0.1rem, -0.1rem);
-    box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem #141414;
+    box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem ${({ theme }) => theme.btnActiveColor};
   }
 
   &::before {
@@ -104,17 +120,27 @@ export const Button = styled.button`
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: -0.4rem -0.4rem 0.6rem -0.2rem #424242;
+    box-shadow: -0.4rem -0.4rem 0.6rem -0.2rem
+      ${({ theme }) => theme.btnBoxShadowbefore};
 
     &:active {
       transform: translate(-0.1rem, -0.1rem);
-      box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem #141414;
+      box-shadow: 0.1rem 0.1rem 0.5rem -0.1rem ${({ theme }) => theme.btnActiveColor};
     }
   }
 
-  ${({ operation }) => operation && `color:#e6c649;`};
-  ${({ del }) => del && `background-color:rgb(189, 15, 15, 0.8);`};
-  ${({ equals }) => equals && `background-color:rgb(9, 26, 105, 0.8);`};
-  ${({ clear }) => clear && `background-color:rgb(6, 86, 100, 0.8);`};
-  ${({ decimal }) => decimal && `font-size: 3.5rem;color:#e6c649;`};
+  ${({ operation }) => operation && `color: #b49104;`};
+  ${({ del }) =>
+    del && `background-color:rgb(189, 15, 15, 0.75); color: #fff;`};
+  ${({ equals }) =>
+    equals && `background-color:rgb(9, 26, 105, 0.75); color: #fff;`};
+  ${({ clear }) =>
+    clear && `background-color:rgb(6, 86, 100, 0.75); color: #fff;`};
+  ${({ decimal }) => decimal && `font-size: 3rem; color:#b49104;`};
+`;
+
+export const SwitchContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.4rem 0 0rem 2rem;
 `;
