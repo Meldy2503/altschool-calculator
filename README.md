@@ -1,5 +1,8 @@
 # Calculator App
 
+![calculator-app](calculator.png)
+
+
 Calculator App is a web application created using React and Styled Components. It provides a simple and user-friendly interface for performing basic arithmetic calculations.
 
 ## Features
