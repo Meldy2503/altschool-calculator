@@ -10,6 +10,7 @@ Calculator App is a web application created using React and Styled Components. I
 - Perform addition, subtraction, multiplication, and division
 - Clear the calculator display
 - Display the result of the calculation
+- Users can toggle between light and dark modes
 
 ## Installation
 
@@ -18,13 +19,13 @@ To install and run the Calculator App locally, follow these steps:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/calculator-app.git
+   git clone https://github.com/Meldy2503/altschool-calculator.git
    ```
 
 2. Navigate to the project directory:
 
    ```shell
-   cd calculator-app
+   cd altschool-calculator
    ```
 
 3. Install the dependencies using npm:
